@@ -1,0 +1,1380 @@
+.course-card {
+    position: relative;
+
+    &__image {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 213px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__session {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 15px;
+
+        span {
+            margin-left: 5px;
+            color: $drivschol-heading-text;
+            font-family: $drivschol-heading-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 187.5%;
+        }
+
+        i {
+            font-size: 32px;
+            color: $drivschol-primary;
+        }
+    }
+
+    &__content {
+        background: $drivschol-black2;
+    }
+
+    &__thumbnail {
+        background-color: $drivschol-white;
+        padding: 20px 30px 26px 30px;
+        margin: 0px 10px;
+
+        @media #{$lg} {
+            padding: 30px 20px;
+        }
+
+        @media #{$sm,$xs} {
+            padding: 30px 20px;
+        }
+    }
+
+    &__bottom {
+        padding: 19px 30px 20px 22px;
+        margin: 0px 10px;
+        position: relative;
+
+        @media #{$lg} {
+            padding: 30px 20px;
+        }
+
+        @media #{$sm,$xs} {
+            padding: 30px 20px;
+        }
+
+        &-btns {
+            font-size: 12px;
+            font-weight: 700;
+            position: absolute;
+            top: 40%;
+            color: $drivschol-white;
+            right: 30px;
+            transition: all 500ms ease-in-out;
+
+            &:hover {
+                color: $drivschol-primary;
+            }
+        }
+    }
+
+    &__meta {
+        position: absolute;
+        margin-top: -109px;
+        right: 10px;
+        padding: 14px 24px;
+        background: $drivschol-primary;
+        display: inline-flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        @media #{$lg,$md,$sm,$xs} {
+            right: 10px;
+            padding: 10px 15px;
+        }
+
+        &-price {
+            color: $drivschol-white;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 108.333%;
+            text-transform: capitalize;
+            margin-bottom: 3px;
+
+            @media #{$lg} {
+                font-size: 20px;
+            }
+
+            @media #{$sm,$xs} {
+                font-size: 20px;
+            }
+        }
+
+        &-class {
+            width: 45px;
+            display: block;
+            color: $drivschol-gray2;
+            text-align: center;
+            font-family: $drivschol-font;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+    }
+
+    &__title {
+        color: $drivschol-heading-text;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 125%;
+        letter-spacing: -0.72px;
+        text-transform: capitalize;
+        margin-top: -4px;
+        margin-bottom: 8px;
+
+        a {
+            color: $drivschol-heading-text;
+            @include borderHover;
+
+            &:hover {
+                color: $drivschol-primary;
+            }
+        }
+
+        @media #{$lg,$md,$sm,$xs} {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__designation {
+        color: $drivschol-gray;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 185.714%;
+        margin-bottom: -4px;
+        letter-spacing: 0;
+    }
+
+    &__author {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+
+        &-image {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            border-radius: 500px;
+            overflow: hidden;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-name {
+            margin-bottom: 5px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+
+            a {
+                color: $drivschol-white;
+                @include borderHover;
+
+                &:hover {
+                    color: $drivschol-primary;
+                }
+            }
+        }
+
+        &-designation {
+            color: $drivschol-gray;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 1.0;
+            margin-bottom: 0;
+        }
+
+    }
+}
+
+.course-one {
+    position: relative;
+    background-color: $drivschol-gray2;
+    padding: 120px 0px 30px 0px;
+    z-index: 1;
+
+    @media #{$md} {
+        padding: 100px 0px 10px 0;
+    }
+
+    @media #{$sm,$xs} {
+        padding: 80px 0px 0px 0px;
+    }
+
+    .container-fluid {
+        max-width: 1540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__item {
+        display: flex;
+        max-width: 740px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+
+        @media (max-width:1450px) {
+            flex-direction: column;
+            flex-direction: column-reverse;
+        }
+
+        @media #{$sm,$xs} {
+            max-width: 400px;
+        }
+
+        &__left {
+            position: relative;
+            padding: 40px 35px 40px 40px;
+            margin-bottom: 60px;
+            background: $drivschol-white;
+            box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.08);
+            flex: 50%;
+            @media #{$xl,$lg,$md} {
+                margin-bottom: 0px;
+            }
+
+            @media #{$sm,$xs} {
+                padding: 25px 20px 25px 20px;
+                bottom: 0px;
+                margin-bottom: 0px;
+            }
+
+            &__price {
+                border: 1px solid $drivschol-primary;
+                height: 136px;
+                width: 143px;
+                margin-bottom: 32px;
+                padding: 11px;
+
+                .price__box {
+                    width: 100%;
+                    height: 100%;
+                    background: $drivschol-black2;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                &__top {
+                    color: $drivschol-primary;
+                    font-family: $drivschol-heading-font;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: 125%;
+                    margin-bottom: -4px;
+                    letter-spacing: -1.2px;
+                    position: relative;
+
+                    sub {
+                        position: absolute;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 800;
+                        line-height: 10px;
+                        margin-left: 0px;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                &__text {
+                    color: $drivschol-gray;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 162.5%;
+                    letter-spacing: 0.48px;
+                    margin-bottom: 0;
+                }
+
+                @media #{$sm,$xs} {
+                    width: 100px;
+                    height: 100px;
+                    margin-bottom: 20px;
+                    padding: 7px;
+
+                    &__text {
+                        font-size: 12px;
+                    }
+
+                    &__top {
+                        font-size: 30px;
+
+                        sub {
+                            font-size: 16px;
+                            margin-left: -2px;
+                        }
+                    }
+                }
+
+                @media #{$sm} {
+                    width: 100px;
+                    height: 100px;
+                    margin-bottom: 20px;
+                    padding: 7px;
+
+                    &__text {
+                        font-size: 12px;
+                    }
+
+                    &__top {
+                        font-size: 30px;
+
+                        sub {
+                            font-size: 16px;
+                            margin-left: 2px;
+                        }
+                    }
+                }
+            }
+
+            &__title {
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 118.75%;
+                letter-spacing: -0.96px;
+                margin-bottom: 12px;
+
+                a {
+                    @include borderHover;
+                    color: $drivschol-black2;
+
+                    &:hover {
+                        color: $drivschol-primary;
+                    }
+                }
+
+                @media #{$sm,$xs} {
+                    font-size: 25px;
+                }
+            }
+
+            &__text {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 185.714%;
+                letter-spacing: 0.42px;
+                max-width: 286px;
+                width: 100%;
+            }
+
+            &__author {
+                margin-top: 22px;
+                display: flex;
+                align-items: center;
+
+                &__card {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    background: $drivschol-gray2;
+                    padding: 15px 20px 15px 20px;
+                    max-width: 236px;
+                    width: 100%;
+                }
+
+                &__thumb {
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 500px;
+                    overflow: hidden;
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &__name {
+                    margin-bottom: 0;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 162.5%;
+                    @include borderHover;
+
+                    &:hover {
+                        color: $drivschol-primary;
+                    }
+                }
+
+                &__degeneration {
+                    margin-bottom: 0;
+                    color: $drivschol-gray;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                &__link {
+                    &__btn {
+                        display: block;
+                        padding: 23px 24px 22px 25px;
+                        color: $drivschol-white;
+                        background: $drivschol-primary;
+                        transition: all 0.4s ease-in-out;
+
+                        i {
+                            font-size: 12px;
+                        }
+
+                        &:hover {
+                            background: $drivschol-black2;
+                        }
+
+                        @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+                            padding: 26px 28px;
+                        }
+
+                        @media #{$sm,$xs} {
+                            padding: 20px 25px;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+            &__link {
+                position: absolute;
+                bottom: -60px;
+                right: 0px;
+
+                @media (max-width:1450px) {
+                    bottom: 0px;
+                    position: relative;
+                    display: inline-block;
+                }
+
+                &__btn {
+                    display: block;
+                    padding: 29px 33px 30px 32px;
+                    color: $drivschol-white;
+                    background: $drivschol-primary;
+                    transition: all 0.4s ease-in-out;
+
+                    &:hover {
+                        background: $drivschol-black2;
+                    }
+
+                    @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+                        padding: 26px 28px;
+                    }
+
+                    @media #{$sm,$xs} {
+                        padding: 20px 25px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        &__right {
+            flex: 53%;
+            position: relative;
+
+        }
+
+        &__session {
+            width: 100%;
+            height: 55px;
+            background: $drivschol-black2;
+            display: flex;
+            justify-content: start;
+            gap: 15px;
+
+            &__shape {
+                position: relative;
+                width: 145px;
+                height: 37px;
+                top: 0;
+                left: 0;
+                background-color: $drivschol-gray2;
+                padding-left: 15px;
+
+                svg {
+                    margin-top: -6px;
+                }
+            }
+
+            &__icon {
+                padding-left: 10px;
+                line-height: 55px;
+                color: $drivschol-white;
+                font-family: $drivschol-heading-font;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                margin-bottom: 0;
+                vertical-align: middle;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-right: 25px;
+
+                i {
+                    color: $drivschol-primary;
+                    font-size: 30px;
+                    padding-right: 15px;
+                }
+
+                @media screen and (min-width: 992px) and (max-width:1450px) {
+                    font-size: 14px;
+
+                    i {
+                        font-size: 20px;
+                        padding-right: 5px;
+                    }
+                }
+
+                @media (max-width:576px) {
+                    font-size: 13px;
+
+                    i {
+                        font-size: 20px;
+                        padding-right: 5px;
+                    }
+                }
+            }
+        }
+
+        &__img {
+            max-height: 460px;
+            display: block;
+            overflow: hidden;
+            position: relative;
+
+            &__two {
+                max-height: 460px;
+            }
+
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+
+            @media #{$sm,$xs} {
+                max-height: 300px;
+                width: 100%;
+            }
+
+            &::before {
+                position: absolute;
+                inset: 0px;
+                content: "";
+                background-color: rgba(0, 0, 0, 0.5);
+                width: 0%;
+                height: 0%;
+                transform: translateY(-100%);
+                transition: all 500ms ease 0s;
+                z-index: 1;
+            }
+        }
+
+        &:hover {
+            .course-one__item__img::before {
+                width: 100%;
+                height: 100%;
+                transform: translateY(0%);
+            }
+        }
+    }
+
+    &__element {
+        position: absolute;
+        top: 0%;
+        right: 0;
+        z-index: -1;
+        animation: top-bottom 4s ease-in-out infinite;
+        mix-blend-mode: color-dodge;
+
+        img {
+            max-width: 100%;
+        }
+
+        @media #{$md,$sm,$xs} {
+            display: none;
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.course-two {
+    position: relative;
+
+    &--page {
+        padding: 120px 0px;
+
+        @media #{$md} {
+            padding: 100px 0px;
+        }
+
+        @media #{$sm,$xs} {
+            padding: 80px 0px;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0%;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+.course-two__home {
+    margin-bottom: 0;
+    background-color: transparent;
+}
+
+//course details 1
+.course-details-one {
+    padding: 120px 0px;
+
+    @media #{$md} {
+        padding: 100px 0px;
+    }
+
+    @media #{$sm,$xs} {
+        padding: 80px 0px;
+    }
+
+    &__inner {
+        background: $drivschol-heading-text;
+        padding: 37px 50px;
+        margin-bottom: 40px;
+
+        @media #{$sm,$xs} {
+            padding: 30px;
+        }
+
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media #{$sm,$xs} {
+                display: block;
+            }
+
+            &__left {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                &__author {
+                    width: 50px;
+                    height: 50px;
+                    overflow: hidden;
+                    border-radius: 500px;
+
+                    img {
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+
+                &__content {
+                    &__name {
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 1.50;
+                        color: $drivschol-white;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+
+                        a {
+                            color: $drivschol-white;
+                            @include borderHover;
+
+                            &:hover {
+                                color: $drivschol-primary;
+                            }
+                        }
+                    }
+
+                    &__designation {
+                        text-transform: uppercase;
+                        color: $drivschol-gray2;
+                        font-family: $drivschol-font;
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: 200%;
+                        letter-spacing: 0.48px;
+                        margin-bottom: 0;
+                    }
+                }
+
+            }
+
+            &__right {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                @media #{$sm,$xs} {
+                    display: block;
+                    margin-top: 30px;
+                }
+
+                &__bye {
+                    &__price {
+                        font-family: $drivschol-font;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 120%;
+                        margin-bottom: 0;
+                        text-align: end;
+
+                        span {
+                            display: block;
+                            color: $drivschol-white;
+                            font-family: $drivschol-heading-font;
+                            font-size: 40px;
+                            font-weight: 700;
+                            line-height: 65%;
+                            text-transform: capitalize;
+                            margin-bottom: 8px;
+                        }
+                    }
+
+                    @media #{$sm,$xs} {
+                        display: block;
+                        margin-bottom: 30px;
+
+                        &__price {
+                            text-align: left;
+                        }
+                    }
+                }
+
+                &__btn {
+                    color: $drivschol-white;
+                    font-size: 15px;
+                    font-weight: 700;
+                    line-height: normal;
+                    padding: 18px 41px 17px 41px;
+                    background: $drivschol-primary;
+
+                    &::before {
+                        background: $drivschol-primary;
+                    }
+
+                    &:hover {
+                        color: $drivschol-black2;
+
+                        &::after {
+                            background: $drivschol-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.course-sidebar {
+    &__image {
+        margin-bottom: 40px;
+    }
+
+    &__single {
+        padding: 30px;
+        margin-bottom: 30px;
+        background: $drivschol-white;
+        box-shadow: 0px 0px 60px 0px rgba(2, 2, 2, 0.07);
+    }
+
+    &__title {
+        padding-bottom: 26px;
+        font-size: 24px;
+        font-weight: $fw-bold;
+        line-height: 100%;
+        text-transform: capitalize;
+        border-bottom: 1px solid $drivschol-primary;
+        margin-bottom: 18px;
+    }
+
+    &__single__two {
+        border: 2px solid $drivschol-primary;
+        margin-bottom: 30px;
+        background: $drivschol-white;
+        box-shadow: 0px 0px 60px 0px rgba(2, 2, 2, 0.07);
+
+        &__title {
+            padding: 25px 30px 28px 30px;
+            font-size: 24px;
+            font-weight: $fw-bold;
+            line-height: 100%;
+            margin-bottom: 0;
+            background: $drivschol-primary;
+            color: $drivschol-white;
+            text-transform: capitalize;
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 32px;
+                height: 20px;
+                position: absolute;
+                bottom: -20px;
+                left: 8%;
+                clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                background: $drivschol-primary;
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__nav {
+        padding: 30px;
+
+        &__item {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: $drivschol-gray2;
+            padding: 14px 20px;
+
+            &__left {
+                margin-bottom: 0;
+                font-size: 18px;
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+
+            &__right {
+                color: $drivschol-heading-text;
+                font-size: 16px;
+                font-weight: $fw-sbold;
+                line-height: 162.5%;
+                text-transform: capitalize;
+            }
+
+            &__icon {
+                font-size: 18px;
+                color: $drivschol-primary;
+                margin-right: 10px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__nav__two {
+
+        &__item {
+            border-bottom: 1px solid $drivschol-border-color;
+            padding: 20px 0px 22px 0px;
+            display: flex;
+            gap: 16px;
+
+            &__image {
+                max-width: 89px;
+                width: 100%;
+                height: 89px;
+                overflow: hidden;
+                position: relative;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    transform: scale(1.0);
+                    transition: all 0.4s ease-in-out;
+                }
+
+                &::after {
+                    content: "";
+                    width: 0%;
+                    height: 100%;
+                    top: 0%;
+                    left: 0;
+                    right: 0;
+                    background-color: rgba($drivschol-black2-rgb, 0.5);
+                    position: absolute;
+                    transition: all 0.4s ease-in-out;
+                }
+            }
+
+            &__content {
+                &__name {
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                    text-transform: capitalize;
+                    color: $drivschol-heading-text;
+
+                    span {
+                        color: $drivschol-text;
+                    }
+
+                    @media #{$xs} {
+                        font-size: 12px;
+                    }
+                }
+
+                &__title {
+                    font-size: 18px;
+                    font-weight: $fw-bold;
+                    margin-bottom: 10px;
+
+                    >a {
+                        color: $drivschol-heading-text;
+                        @include borderHover;
+
+                        &:hover {
+                            color: $drivschol-primary;
+                        }
+                    }
+
+                    @media #{$xs} {
+                        font-size: 15px;
+                    }
+                }
+
+                &__price {
+                    display: block;
+                    color: $drivschol-primary;
+                    font-family: $drivschol-heading-font;
+                    font-size: 20px;
+                    font-weight: bold;
+                    line-height: 1;
+
+                    @media #{$xs} {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: 0;
+            }
+
+            &:hover {
+                .course-sidebar__nav__two__item__image {
+                    &::after {
+                        width: 100%;
+                    }
+
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+
+    &__contact {
+        background: $drivschol-black2;
+        position: relative;
+        padding: 35px 30px 30px 30px;
+        margin-bottom: -30px;
+
+        @media #{$lg,$sm,$xs} {
+            padding: 30px 10px 20px 10px;
+        }
+
+        &::after {
+            content: "";
+            width: 32px;
+            height: 20px;
+            position: absolute;
+            top: 0px;
+            left: 8%;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            background: $drivschol-black3;
+            transform: rotate(180deg);
+        }
+
+        &__title {
+            color: $drivschol-white;
+            max-width: 250px;
+            width: 100%;
+            margin-bottom: 6px;
+            margin-top: -4px;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 145.833%;
+
+            @media #{$lg,$sm,$xs} {
+                font-size: 20px;
+            }
+        }
+
+        &__list {
+            display: block;
+            border-bottom: 1px solid $drivschol-border-color3;
+            padding-bottom: 30px;
+
+            &__item {
+                color: $drivschol-gray;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                margin-bottom: -21px;
+                padding-bottom: 2px;
+                line-height: 335.714%;
+
+                i {
+                    font-size: 14px;
+                    color: $drivschol-primary;
+                    margin-right: 10px;
+                }
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+
+                @media #{$lg,$sm,$xs} {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &__info {
+            margin-top: 30px;
+
+            &__btn {
+                gap: 24px;
+
+            }
+
+            &__icon {
+                width: 50px;
+                height: 50px;
+                border-radius: 500px;
+                background-color: $drivschol-primary;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    font-size: 22px;
+                    color: $drivschol-white;
+                }
+            }
+
+            &__text {
+                color: $drivschol-primary;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 170.923%;
+            }
+
+            &__call {
+                color: $drivschol-white;
+                margin-top: -4px;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 166.667%;
+                margin-bottom: 0;
+                @include borderHover;
+
+                &:hover {
+                    color: $drivschol-primary;
+                }
+
+                @media #{$lg,$sm,$xs} {
+                    font-size: 19px;
+                }
+            }
+
+            @media #{$lg,$sm,$xs} {
+                font-size: 19px;
+            }
+        }
+
+    }
+}
+
+
+//course details
+
+.course-details {
+    &__single {
+        margin-bottom: 50px;
+
+        &__image {
+            .benefit__image {
+                max-width: 270px;
+                width: 100%;
+                height: 300px;
+
+                @media #{$sm,$xs} {
+                    max-width: 100%;
+                    margin-bottom: 30px;
+                }
+
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__single__two {
+        margin-top: -10px;
+        display: flex;
+        align-items: center;
+
+        @media #{$sm,$xs} {
+            display: block;
+        }
+    }
+
+    &__image {
+        max-height: 450px;
+        width: 100%;
+        margin-bottom: 40px;
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__title {
+        margin-top: -10px;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 150%;
+        margin-bottom: 18px;
+
+        @media #{$sm,$xs} {
+            font-size: 25px;
+        }
+
+        &__two {
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 195.833%;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 33px;
+        letter-spacing: 0;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 200%;
+    }
+
+    &__inner {
+        margin-top: 40px;
+        display: flex;
+        gap: 30px;
+
+        @media #{$md,$sm,$xs} {
+            margin-bottom: 40px;
+        }
+
+        @media #{$sm,$xs} {
+            display: block;
+
+            &__item {
+                margin-bottom: 30px;
+            }
+        }
+
+        &__item {
+            max-width: 370px;
+            background-color: $drivschol-white;
+            box-shadow: 0px 0px 60px 0px rgba(2, 2, 2, 0.07);
+
+            &__head {
+                background: $drivschol-primary;
+                padding: 16px 30px 14px 30px;
+                display: flex;
+                position: relative;
+                align-items: center;
+                gap: 20px;
+
+                @media #{$lg,$sm,$xs} {
+                    padding: 20px;
+                }
+
+                &__icon {
+                    .icon {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 500px;
+                        background: $drivschol-black2;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        i {
+                            color: $drivschol-white;
+                            font-size: 22px;
+                        }
+                    }
+                }
+
+                &__content {
+                    &__title {
+                        color: $drivschol-white;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 110%;
+                        margin-bottom: -3px;
+
+                        @media #{$lg,$sm,$xs} {
+                            font-size: 18px;
+                        }
+                    }
+
+                    &__degeneration {
+                        margin-top: -5px;
+                        color: $drivschol-white;
+                        font-family: $drivschol-font;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 228.571%;
+
+                        @media #{$lg,$sm,$xs} {
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    width: 32px;
+                    height: 20px;
+                    position: absolute;
+                    bottom: -20px;
+                    left: 8%;
+                    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                    background: $drivschol-primary;
+                    transform: rotate(180deg);
+                }
+            }
+
+            &__body {
+                padding: 30px 26px 40px 30px;
+                background-color: $drivschol-white;
+
+                &__text {
+                    color: $drivschol-gray;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 200%;
+                    margin-bottom: 30px;
+                    letter-spacing: 0;
+                }
+            }
+        }
+    }
+
+    &__benefit {
+        padding: 29px 40px 35px 40px;
+        background: $drivschol-gray2;
+        margin-left: -13px;
+
+        @media #{$xs} {
+            padding: 20px;
+        }
+
+        @media (max-width:767px) {
+            margin-left: 0px;
+        }
+
+        &__title {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 195.833%;
+            margin-bottom: 10px;
+            margin-top: -5px;
+        }
+
+        &__nav {
+            padding-left: 0;
+
+            &__item {
+                color: $drivschol-heading-text;
+                font-family: $drivschol-font;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 160%;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                i {
+                    color: $drivschol-primary;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+}

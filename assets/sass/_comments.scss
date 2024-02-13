@@ -1,0 +1,136 @@
+.comments-one {
+	margin-top: 40px;
+
+	@include devices(xl) {
+		margin-top: 45px;
+	}
+
+	&__title {
+		margin: 0;
+		text-transform: capitalize;
+		font-size: 25px;
+		font-weight: bold;
+		margin-top: -4px;
+		margin-bottom: -4px;
+
+		@include devices(lg) {
+			font-size: 30px;
+		}
+	}
+
+
+	&__list {
+		margin: 0;
+		margin-top: 35px;
+	}
+
+	&__card {
+		@include devices(md) {
+			display: flex;
+			align-items: flex-start;
+		}
+
+		&:not(:first-of-type) {
+			margin-top: 40px;
+			padding-top: 40px;
+			border-top: 1px solid $drivschol-border-color;
+
+			@include devices(xl) {
+				margin-top: 50px;
+				padding-top: 50px;
+			}
+		}
+
+		&__image {
+			@include devices(md) {
+				margin-right: 30px;
+			}
+
+			img {
+				max-width: 165px;
+				max-height: 165px;
+				border-radius: 50%;
+			}
+		}
+
+		&__title {
+			line-height: 110.333%;
+			margin: 0;
+			font-size: 24px;
+			text-transform: capitalize;
+			font-weight: bold;
+			margin-top: 20px;
+			margin-bottom: 10px;
+
+			@include devices(xl) {
+				margin-bottom: 17px;
+				margin-top: 0;
+			}
+		}
+
+		&__text {
+			font-size: 15px;
+			line-height: 2em;
+			margin-bottom: 20px;
+			max-width: 560px;
+		}
+
+		&__reply {
+			padding: 10px 20px;
+			color:$drivschol-text;
+			background-color: $drivschol-gray;
+			font-size: 16px;
+			font-weight: 500;
+
+			&:hover {
+				color: $drivschol-white;
+			}
+
+			&::after {
+				background-color: $drivschol-black2;
+			}
+
+			&::before {
+				background-color:$drivschol-gray2;
+			}
+		}
+
+		&__content {
+			position: relative;
+			margin-top: 13px;
+		}
+	}
+
+}
+
+.comments-form {
+	margin-top: 40px;
+	padding-top: 40px;
+	border-top: 1px solid $drivschol-border-color;
+	@include devices(xl) {
+		margin-top: 50px;
+		padding-top: 50px;
+	}
+
+	&__title {
+		margin: 0;
+		text-transform: capitalize;
+		font-size: 25px;
+		font-weight: bold;
+		margin-top: -4px;
+		margin-bottom: -4px;
+
+		@include devices(lg) {
+			font-size: 30px;
+		}
+	}
+
+	&__form {
+		margin-top: 38px;
+		.drivschol-btn {
+			padding: 17px 40px;
+			line-height: normal !important;
+		}
+	}
+
+}

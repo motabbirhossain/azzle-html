@@ -1,0 +1,166 @@
+.client-carousel {
+  position: relative;
+
+  &--base{
+    padding-bottom: 120px;
+    @media #{$md} {
+      padding-bottom: 100px;
+    }
+    @media #{$sm,$xs} {
+      padding-bottom: 80px;
+    }
+  }
+
+  &--base-two{
+    padding: 120px 0px;
+    @media #{$md} {
+      padding: 100px 0px;
+    }
+    @media #{$sm,$xs} {
+      padding: 80px 0px;
+    }
+  }
+
+  &__one {
+
+    &__item {
+
+      img {
+        opacity: 0.2;
+        transition: all 500ms ease;
+        max-width: 100%;
+        width: auto !important;
+      }
+
+      &:hover {
+        img {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+  &__top{
+    position: relative;
+    margin-bottom: 60px;
+    @media #{$md,$sm,$xs} {
+      margin-bottom: 50px;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      top: 35%;
+      width: 100%;
+      height: 1px;
+      background: $drivschol-border-color;
+    }
+  }
+  &__title{
+    display: inline-block;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    padding: 0px 20px;
+    position: relative;
+    background-color: $drivschol-white;
+
+  }
+}
+
+.client-carousel-one {
+  position: relative;
+  background: $drivschol-white;
+  padding: 0 0 60px;
+
+  .client-carousel__one {
+    padding: 74px 0 0;
+  }
+
+  .owl-theme .owl-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    z-index: 2;
+    line-height: .8;
+
+    button {
+      width: 26px;
+      height: 27px;
+      background-color: $drivschol-gray;
+      margin: 0 2.5px;
+      padding: 0;
+      transition: all 500ms ease;
+      font-size: 12px;
+      color: $drivschol-black2;
+      text-align: center;
+      font-size: 12px;
+      line-height: 27px;
+      border-radius: 0;
+
+      &:hover {
+        background-color: $drivschol-text;
+        color: $drivschol-white;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+      content: '';
+      height: 1px;
+      background-color: $drivschol-border-color;
+      z-index: -1;
+    }
+
+    &::after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: -1;
+      width: 110px;
+      content: '';
+      height: 1px;
+      background-color: $drivschol-white;
+    }
+  }
+
+  .client-carousel__one__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 500ms ease;
+
+    img {
+      transition: all 500ms ease;
+      opacity: 0.2;
+      max-width: 100%;
+      max-width: 150px;
+    }
+
+    &:hover {
+      background-color: #f8f5f0;
+
+      img {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+.client-carousel__one__item{
+  img{
+    max-width: 145px;
+    width: 100%;
+  }
+}

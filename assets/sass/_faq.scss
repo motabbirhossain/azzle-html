@@ -1,0 +1,181 @@
+
+
+.faq-page {
+	padding: 120px 0px;
+    @media #{$md} {
+        padding: 100px 0px;
+    }
+    @media #{$sm,$xs} {
+        padding: 80px 0px;
+    }
+
+	&__contact{
+		background: $drivschol-primary;
+		padding: 65px 35px 35px 40px;
+		margin-bottom: 30px;
+		@media #{$lg} {
+			padding: 68px 20px 40px 20px;
+        }
+		@media #{$md} {
+			margin-bottom: 30px;
+		}
+		&__icon{
+			margin-top: -100px;
+			margin-bottom: 10px;
+			&__item{
+				border: 8px solid $drivschol-white;
+				margin: 0 auto;
+				width: 86px;
+				height: 86px;
+				border-radius: 500px;
+				background-color: $drivschol-black2;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				i{
+					font-size: 25px;
+					color: $drivschol-primary;
+				}
+			}
+		}
+
+		&__title{
+			color: $drivschol-white;
+			font-size: 24px;
+			font-weight: 700;
+			line-height:147.917%;
+			margin-bottom: 12px;
+			@media #{$lg} {
+				font-size: 20px;
+			}
+		}
+		&__number{
+			color: $drivschol-white;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 183.795%;
+			padding-bottom: 0;
+			margin-bottom: 0;
+			a{
+				color: $drivschol-white;
+				font-size: 24px;
+				font-weight: 700;
+				line-height: 122.53%;
+				margin-top: -4px;
+				display: block;
+				@include borderHover;
+				&:hover {
+					color: $drivschol-white;
+				}
+				@media #{$lg} {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+	&__accordion {
+		.accrodion {
+			border: 1px solid $drivschol-border-color;
+			margin-bottom: 20px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+
+		.accrodion-title {
+			padding: 19px 30px 17px 30px;
+			padding-right: 40px;
+			cursor: pointer;
+
+			@include devices(lg) {
+				padding-right: 70px;
+			}
+			@media (max-width:767px) {
+				padding-left: 20px;
+			}
+
+			&__text {
+				margin: 0;
+				transition: all 500ms ease;
+				position: relative;
+				font-size: 18px;
+				font-style: normal;
+				line-height: 34px;
+				font-weight: 700;
+				text-transform: none;
+			}
+
+			&__icon {
+				width: 35px;
+				height: 35px;
+				position: absolute;
+				top: 50%;
+				right: -40px;
+				color: $drivschol-primary;
+				border-radius: 500px;
+				transform: translateY(-50%);
+				background: $drivschol-gray2;
+				&::after,
+				&::before {
+					width: 3px;
+					height: 15px;
+					position: absolute;
+					background-color: $drivschol-heading-text;
+					top: 50%;
+					left: 50%;
+					content: '';
+					transform: translate(-50%, -50%);
+					transition: all 500ms ease;
+				}
+
+				&::after {
+					width: 15px;
+					height: 3px;
+				}
+				@media #{$md,$sm,$xs} {
+					right: -30px;
+				}
+			}
+
+		}
+
+		.active .accrodion-title__icon {
+			background-color: $drivschol-primary;
+			&::after,
+			&::before {
+				background-color: $drivschol-white;
+				opacity: 0;
+			}
+
+			&::after {
+				opacity: 1;
+			}
+		}
+
+		.accrodion-content {
+			.inner {
+				padding: 03px 55px 30px 30px;
+				margin-top: -3px;
+				@media #{$sm,$xs} {
+					padding: 0px 20px 30px;
+				}
+			}
+
+			&__text {
+				color: $drivschol-gray;
+				margin-top: 3px;
+				font-size: 16px;
+				font-weight: 500;
+				letter-spacing: 0.8px;
+				line-height: 187.5%;
+				margin-bottom: -3px;
+				@media #{$sm,$xs} {
+					font-size: 14px;
+					line-height: 20px;
+				}
+
+			}
+		}
+	}
+}
