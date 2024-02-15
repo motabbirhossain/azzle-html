@@ -1,0 +1,105 @@
+/* ------------------------------------------------------------------
+    Template All Variables Defined - Value Change with Your's Need
+ -------------------------------------------------------------------- */
+ $white:#FFF;
+ $black:#000;
+ $gray:#f4f7fd;
+ $red: #FF8888;
+ $base: #1085A9;
+ $blue: #01A0E1;
+ $primary: #8DC63F;
+ $secondary: #F47102;
+ 
+ // Theme Color - Defualt Colors
+ $textcolor: #191919;
+
+ 
+ // Theme Font Family
+$heading-font:"DM Sans", sans-serif;
+$body-font:"Inter", sans-serif;
+$special-font:"Font Awesome 5 Free";
+
+
+
+
+ @mixin border-radius($r) {
+     -webkit-border-radius: $r;
+     -moz-border-radius: $r;
+     -ms-border-radius: $r;
+     border-radius: $r;
+ }
+ 
+ @mixin transition($transition) {
+     -webkit-transition: all $transition ease-in-out;
+     -moz-transition: all $transition ease-in-out;
+     -ms-transition: all $transition ease-in-out;
+     -o-transition: all $transition ease-in-out;
+     transition: all $transition ease-in-out;
+ }
+ 
+ @mixin transform($transform) {
+     -webkit-transform: $transform;
+     -moz-transform: $transform;
+     -ms-transform: $transform;
+     -o-transform: $transform;
+     transform: $transform;
+ }
+ 
+ 
+ @mixin overlay($color, $opacity) {
+     z-index: 1;
+     position: relative;
+ 
+     &:before {
+	   top: 0;
+	   left: 0;
+	   z-index: -1;
+	   width: 100%;
+	   height: 100%;
+	   content: '';
+	   position: absolute;
+	   background: rgba($color, $opacity);
+	   @include transition(all 0.3s ease);
+     }
+ }
+ 
+ 
+ @mixin align-center($type: 'all') {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+ 
+     // all
+     @if $type=='all' {
+	   -webkit-box-pack: center;
+	   -ms-flex-pack: center;
+	   justify-content: center;
+	   -webkit-box-align: center;
+	   -ms-flex-align: center;
+	   align-items: center;
+ 
+	   // horizontal
+     }
+ 
+     @else if $type=='horizontal' {
+	   -webkit-box-pack: center;
+	   -ms-flex-pack: center;
+	   justify-content: center;
+ 
+	   // vertical
+     }
+ 
+     @else if $type=='vertical' {
+	   -webkit-box-align: center;
+	   -ms-flex-align: center;
+	   align-items: center;
+ 
+	   // vertical
+     }
+ 
+     @else if $type=='bottom' {
+	   -webkit-box-align: end;
+	   -ms-flex-align: end;
+	   align-items: flex-end;
+     }
+ }
