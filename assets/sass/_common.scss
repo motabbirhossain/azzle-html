@@ -56,6 +56,7 @@ p {
   }
 }
 a {
+    text-decoration: none;
   &:hover, &:focus, &:active {
   text-decoration: none;
   outline: none !important;
@@ -166,6 +167,6 @@ input, textarea, button {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     width: 100%;
 }
